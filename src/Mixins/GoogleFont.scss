@@ -1,0 +1,14 @@
+@mixin google-font( $font-name, $font-weights: null, $languages: null ) {
+
+    $url: "https://fonts.googleapis.com/css?family=#{str-replace($font-name, " ", "+")}";
+
+    @if $font-weights {
+        $url += ':' + $font-weights;
+    }
+
+    @if $languages {
+        $url += '&amp;subset=' + $languages;
+    }
+
+    @import url( $url );
+}
