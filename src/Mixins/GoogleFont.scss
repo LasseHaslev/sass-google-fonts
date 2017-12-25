@@ -3,11 +3,11 @@
     $url: "https://fonts.googleapis.com/css?family=#{str-replace($font-name, " ", "+")}";
 
     @if $font-weights {
-        $url += ':' + $font-weights;
+        $url: $url + ':' + $font-weights;
     }
 
     @if $languages {
-        $url += '&amp;subset=' + $languages;
+        $url: $url + '&amp;subset=' + $languages;
     }
 
     @import url( $url );
