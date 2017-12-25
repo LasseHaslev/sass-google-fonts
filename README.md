@@ -1,4 +1,4 @@
-# sass-google-fonts ![Travis status](https://api.travis-ci.org/LasseHaslev/sass-google-fonts.svg?branch=master)
+# sass-google-fonts [![Build Status](https://travis-ci.org/LasseHaslev/sass-google-fonts.svg?branch=master)](https://travis-ci.org/LasseHaslev/sass-google-fonts)
 > Include google fonts to your projects
 
 ## Install
