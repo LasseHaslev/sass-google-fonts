@@ -2,13 +2,6 @@ import test from 'ava';
 import sass from 'node-sass';
 import path from 'path';
 
-var stringIs = function( whatWeGet, whatWeWant ) {
-
-    whatWeGet = whatWeGet.slice( 0, -1 );
-
-    return whatWeGet == whatWeWant;
-}
-
 var renderSass = function( content ) {
     var result = sass.renderSync({
         includePaths: [
@@ -17,7 +10,7 @@ var renderSass = function( content ) {
         outputStyle: 'compressed',
         data: content,
     });
-    return result.css.toString()
+    return result.css.toString().slice( 0, -1 );
 }
 
 test( 'it can load google font', t => {
@@ -28,7 +21,7 @@ test( 'it can load google font', t => {
         @include google-font( 'Lobster' );
     ` );
 
-    t.true( stringIs( sass, '@import url("https://fonts.googleapis.com/css?family=Lobster")' ) );
+    t.is( sass, '@import url("https://fonts.googleapis.com/css?family=Lobster")' );
 
 } );
 
@@ -39,5 +32,5 @@ test( 'it is replacing spaces in names to pluss sign', t => {
         @include google-font( 'Lobster Party' );
     ` );
 
-    t.true( stringIs( sass, '@import url("https://fonts.googleapis.com/css?family=Lobster+Party")' ) );
+    t.is( sass, '@import url("https://fonts.googleapis.com/css?family=Lobster+Party")' );
 } );
