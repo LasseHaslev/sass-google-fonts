@@ -1,5 +1,5 @@
 {
-  "name": "sass-google-font",
+  "name": "sass-google-fonts",
   "version": "1.0.0",
   "description": "Implement google fonts easily and readable in sass.",
   "main": "src/GoogleFonts.scss",
