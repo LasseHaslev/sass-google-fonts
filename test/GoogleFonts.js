@@ -34,3 +34,17 @@ test( 'it is replacing spaces in names to pluss sign', t => {
 
     t.is( sass, '@import url("https://fonts.googleapis.com/css?family=Lobster+Party")' );
 } );
+
+test( 'it can set the font weights to include', t => {
+    var sass = renderSass( `
+        @import 'src/GoogleFonts.scss';
+        @include google-font( 'Lobster', '300,500' );
+    ` );
+
+    t.is( sass, '@import url("https://fonts.googleapis.com/css?family=Lobster:300,500")' );
+} );
+
+// it can set the language
+
+// it got a include and use mixin
+// it is only including the fonts one time
