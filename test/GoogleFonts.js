@@ -9,34 +9,35 @@ var stringIs = function( whatWeGet, whatWeWant ) {
     return whatWeGet == whatWeWant;
 }
 
-test( 'it can load google font', t => {
-
+var renderSass = function( content ) {
     var result = sass.renderSync({
         includePaths: [
             path.resolve( '.' ),
         ],
         outputStyle: 'compressed',
-        data: `
-            @import 'src/GoogleFonts.scss';
-            @include google-font( 'Lobster' );
-        `
+        data: content,
     });
+    return result.css.toString()
+}
 
-    t.true( stringIs( result.css.toString(), '@import url("https://fonts.googleapis.com/css?family=Lobster")' ) );
+test( 'it can load google font', t => {
+
+
+    var sass = renderSass( `
+        @import 'src/GoogleFonts.scss';
+        @include google-font( 'Lobster' );
+    ` );
+
+    t.true( stringIs( sass, '@import url("https://fonts.googleapis.com/css?family=Lobster")' ) );
 
 } );
 
 test( 'it is replacing spaces in names to pluss sign', t => {
-    var result = sass.renderSync({
-        includePaths: [
-            path.resolve( '.' ),
-        ],
-        outputStyle: 'compressed',
-        data: `
-            @import 'src/GoogleFonts.scss';
-            @include google-font( 'Lobster Party' );
-        `
-    });
 
-    t.true( stringIs( result.css.toString(), '@import url("https://fonts.googleapis.com/css?family=Lobster+Party")' ) );
+    var sass = renderSass( `
+        @import 'src/GoogleFonts.scss';
+        @include google-font( 'Lobster Party' );
+    ` );
+
+    t.true( stringIs( sass, '@import url("https://fonts.googleapis.com/css?family=Lobster+Party")' ) );
 } );
