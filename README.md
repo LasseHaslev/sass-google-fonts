@@ -50,6 +50,8 @@ npm run test
 npm run tdd
 ```
 
+If you add or change functionality, remember to add tests in [`test/`](https://github.com/LasseHaslev/sass-google-fonts/tree/master/test).
+
 ### Publish to npm
 
 > Make sure all tests are successful before publishing to NPM
