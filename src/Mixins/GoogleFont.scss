@@ -7,7 +7,7 @@
     }
 
     @if $languages {
-        $url: $url + '&amp;subset=' + $languages;
+        $url: $url + '&subset=' + $languages;
     }
 
     @import url( $url );

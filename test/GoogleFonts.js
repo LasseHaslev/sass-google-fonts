@@ -44,7 +44,14 @@ test( 'it can set the font weights to include', t => {
     t.is( sass, '@import url("https://fonts.googleapis.com/css?family=Lobster:300,500")' );
 } );
 
-// it can set the language
+test( 'it can subset the languages', t => {
+    var sass = renderSass( `
+        @import 'src/GoogleFonts.scss';
+        @include google-font( 'Lobster', '400,400i,700', 'greek,latin-ext,vietnamese' );
+    ` );
+
+    t.is( sass, '@import url("https://fonts.googleapis.com/css?family=Lobster:400,400i,700&subset=greek,latin-ext,vietnamese")' );
+} );
 
 // it got a include and use mixin
 // it is only including the fonts one time
