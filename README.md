@@ -1,5 +1,7 @@
 # @lassehaslev/google-fonts-sass
 
+## Install
+
 ## Usage
 
 This mixin will include google font of your choice.
