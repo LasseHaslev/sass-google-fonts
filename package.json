@@ -22,7 +22,7 @@
     "readable",
     "webfont"
   ],
-  "author": "Lasse S. Haslev",
+  "author": "Joseph Innes",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dr-useless/scss-google-fonts/issues"
