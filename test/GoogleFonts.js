@@ -21,7 +21,7 @@ test( 'it can load google font', t => {
         @include google-font( 'Lobster' );
     ` );
 
-    t.is( sass, '@import url("https://fonts.googleapis.com/css?family=Lobster")' );
+    t.is( sass, '@import url("https://fonts.googleapis.com/css?family=Lobster&display=swap")' );
 
 } );
 
@@ -32,7 +32,7 @@ test( 'it is replacing spaces in names to plus sign', t => {
         @include google-font( 'Lobster Party' );
     ` );
 
-    t.is( sass, '@import url("https://fonts.googleapis.com/css?family=Lobster+Party")' );
+    t.is( sass, '@import url("https://fonts.googleapis.com/css?family=Lobster+Party&display=swap")' );
 } );
 
 test( 'it can set the font weights to include', t => {
@@ -41,7 +41,7 @@ test( 'it can set the font weights to include', t => {
         @include google-font( 'Lobster', '300,500' );
     ` );
 
-    t.is( sass, '@import url("https://fonts.googleapis.com/css?family=Lobster:300,500")' );
+    t.is( sass, '@import url("https://fonts.googleapis.com/css?family=Lobster:300,500&display=swap")' );
 } );
 
 test( 'it can subset the languages', t => {
@@ -50,7 +50,7 @@ test( 'it can subset the languages', t => {
         @include google-font( 'Lobster', '400,400i,700', 'greek,latin-ext,vietnamese' );
     ` );
 
-    t.is( sass, '@import url("https://fonts.googleapis.com/css?family=Lobster:400,400i,700&subset=greek,latin-ext,vietnamese")' );
+    t.is( sass, '@import url("https://fonts.googleapis.com/css?family=Lobster:400,400i,700&subset=greek,latin-ext,vietnamese&display=swap")' );
 } );
 
 // it got a include and use mixin
