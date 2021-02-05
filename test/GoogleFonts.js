@@ -25,7 +25,7 @@ test( 'it can load google font', t => {
 
 } );
 
-test( 'it is replacing spaces in names to pluss sign', t => {
+test( 'it is replacing spaces in names to plus sign', t => {
 
     var sass = renderSass( `
         @import 'src/GoogleFonts.scss';

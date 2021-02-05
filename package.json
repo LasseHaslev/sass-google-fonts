@@ -1,21 +1,19 @@
 {
-  "name": "sass-google-fonts",
-  "version": "1.0.1",
-  "description": "Implement google fonts easily and readable in sass.",
+  "name": "scss-google-fonts",
+  "version": "1.0.0",
+  "description": "Include google fonts easily in sass.",
   "main": "src/GoogleFonts.scss",
   "dependencies": {},
   "devDependencies": {
-    "@lassehaslev/executor": "^1.0.1",
     "ava": "^0.24.0",
     "node-sass": "^4.7.2"
   },
   "scripts": {
-    "test": "ava",
-    "tdd": "executor 'npm run test' --watch='**/*' --ignore='node_modules/' --ignore='dist/'"
+    "test": "ava"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LasseHaslev/sass-google-fonts.git"
+    "url": "git+https://github.com/dr-useless/scss-google-fonts.git"
   },
   "keywords": [
     "sass",
@@ -26,7 +24,7 @@
   "author": "Lasse S. Haslev",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/LasseHaslev/sass-google-fonts/issues"
+    "url": "https://github.com/dr-useless/scss-google-fonts/issues"
   },
-  "homepage": "https://github.com/LasseHaslev/sass-google-fonts#readme"
+  "homepage": "https://github.com/dr-useless/scss-google-fonts#readme"
 }
