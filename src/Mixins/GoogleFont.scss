@@ -9,6 +9,8 @@
     @if $languages {
         $url: $url + '&subset=' + $languages;
     }
+    
+    $url: $url + '&display=swap';
 
     @import url( $url );
 }
