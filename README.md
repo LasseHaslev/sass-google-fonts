@@ -2,6 +2,7 @@
 > Include google fonts in your projects
 
 Forked from https://github.com/LasseHaslev/sass-google-fonts
+Updated deps & added display=swap parameter (see https://developers.google.com/fonts/docs/getting_started#use_font-display)
 
 ## Install
 
